@@ -1,4 +1,6 @@
 class Order < ApplicationRecord
+  has_many_through :order_product
+  belongs_to :customer
   def products
     product_ids = OrderProduct.where(order_id: id).pluck(:product_id)
     Product.find(product_ids)
