@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-  has_many_through :order_product
+  has_many :orders, through: :order_product
+  has_many :order_products
   def available?
     inventory > 0
   end
