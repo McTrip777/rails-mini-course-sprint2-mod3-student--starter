@@ -28,7 +28,7 @@ module Api
       end
 
       def ship
-        @order = Order.find(params[:id])
+        @order = Customer.find(params[:id]).order_products
         @order_processor = OrderProcessor.new(@order)
 
         if @order_processor.ship

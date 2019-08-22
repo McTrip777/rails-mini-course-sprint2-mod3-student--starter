@@ -11,3 +11,25 @@ Product.create!([
   { name: "Widget Kit",         inventory: 123, cost_cents: 1_200_00 },
   { name: "Refurbished Widget", inventory: 39,  cost_cents: 900_00 },
 ])
+
+Order.create!([
+ { status: "pending", customer_id: 1 },
+ { status: "pending", customer_id: 1 },
+ { status: "pending", customer_id: 1 },
+ { status: "pending", customer_id: 1 },
+ { status: "pending", customer_id: 2 },
+ { status: "pending", customer_id: 2 },
+ { status: "pending", customer_id: 2 },
+ { status: "pending", customer_id: 2 },
+ { status: "pending", customer_id: 3 },
+ { status: "pending", customer_id: 3 },
+ { status: "pending", customer_id: 3 },
+ { status: "pending", customer_id: 3 },
+])
+
+OrderProduct.create!([
+ { order_id: 1, product_id: 1 },
+ { order_id: 2, product_id: 2 },
+ { order_id: 3, product_id: 3 },
+ { order_id: 4, product_id: 4 },
+])
